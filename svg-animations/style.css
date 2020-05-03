@@ -1,0 +1,25 @@
+#pointer{
+    animation: pointer 1s infinite linear;
+    transform-origin: 51% 58%;
+    transform-box: view-box;
+}
+body{
+    background-color: #E5E5E5;
+    display: block;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+@keyframes pointer{
+    from {
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
