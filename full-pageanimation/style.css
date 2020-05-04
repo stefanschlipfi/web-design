@@ -3,6 +3,7 @@
  padding: 0;
  box-sizing: border-box;
  font-family: 'Jost', sans-serif;
+ scroll-behavior: smooth;
 }
 
 body{
@@ -14,6 +15,15 @@ body{
     color: white;
     z-index: 3;
 
+}
+
+.btn{
+    padding: 10px 20px;
+    background-color: rgba(59, 133, 218, 0.705);
+    border: 2px solid rgba(55, 124, 202, 0.801);
+    color: white;
+    cursor:  pointer;
+    z-index: 2;
 }
 
 nav{
@@ -74,41 +84,74 @@ section{
 
 .s1 .headline{
     position: absolute;
-    top: 60%;
+    top: 30%;
     left: 10%;
     font-size: 100px;
 }
+.s1 .btn{
+    position: absolute;
+    top: 47%;
+    left: 10%;
+    font-size: large;
+}
+
 .s2 .headline{
     position: absolute;
-    top: 128%;
+    top: 113%;
     font-size: 50px;
 
 }
 
 .gallery{
-    top: 140%;
 
+    top: 130%;
     position: absolute;
     display: grid;
     height: fit-content;
     grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
     grid-gap: 15px;
+    margin-bottom: 40px;
 }
 
 .pics{
 
     width: 100%;
     object-fit: cover;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
 
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 510px) {
     .s1 .headline{
         position: absolute;
-        top: 68%;
+        top: 48%;
         left: 10%;
         font-size: 70px;
+    }
+
+    .s1 .btn{
+        position: absolute;
+        top: 63%;
+        left: 10%;
+    }
+
+    .s2 .headline{
+        position: absolute;
+        top: 133%;
+        font-size: 50px;
+    
+    }
+    
+    .gallery{
+        
+        top: 150%;
+        position: absolute;
+        display: grid;
+        height: fit-content;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 15px;
+        margin-bottom: 40px;
     }
 }
