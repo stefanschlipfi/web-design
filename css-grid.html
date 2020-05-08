@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+</head>
+<style>
+    :root{
+        --gap: 10px
+    }
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    div{
+        text-align: center;
+        min-height: 40px;
+        border-radius: 5px;
+    }
+    body{
+        margin: 10px;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+    }
+    .container{
+        display: grid;
+        min-width: 80%;
+        height: 80%;
+        grid-template-columns: 20% 50% 30%;
+        grid-template-rows: 10% 80% 10%;
+        grid-gap: var(--gap);
+
+    }
+    .header{
+        grid-column: 1/4;
+        grid-row: 1/2;
+        background-color: chocolate;
+    }
+    .nav{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        background-color: cornflowerblue;
+    }
+    .main{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main .content{
+        flex-grow: 1;
+        background-color: indianred;
+        margin-bottom: var(--gap);
+    }
+
+    .ad{
+        grid-row: 2/3;
+        grid-column: 3/4;
+        background-color: hotpink;
+    }
+
+    .footer{
+        grid-column: 1/4;
+        grid-row: 3/4;
+        background-color: grey;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="nav">navbar</div>
+        <div class="main">
+            <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dicta inventore distinctio itaque vero, culpa dolorem magni dolor harum cupiditate!</div>
+            <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos numquam quasi quidem quae. Aperiam placeat omnis minus repudiandae quas aliquam.</div>
+            <div class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere rem alias voluptatibus molestias animi quos in odio eligendi distinctio reprehenderit.</div>
+            <div class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere rem alias voluptatibus molestias animi quos in odio eligendi distinctio reprehenderit.</div>
+            <div class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere rem alias voluptatibus molestias animi quos in odio eligendi distinctio reprehenderit.</div>
+          
+        </div>
+        <div class="ad">Werbung</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>
