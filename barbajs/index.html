@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=#, initial-scale=1.0">
+    <title>Barba + Gsap</title>
+</head>
+<body data-barba="wrapper">
+        <!-- put here content that will not change
+        between your pages, like <header> or <nav> -->
+      
+        <div class="content">
+        <div class="hero" data-barba="container" data-barba-namespace="hero">
+          <!-- put here the content you wish to change
+          between your pages, like your main content <h1> or <p> -->
+            <div class="text">
+                <h2>Hello World</h2>
+                <p>Welcome to my new awesome website!</p>
+            </div>
+            <img src="assets/welcome.png">
+        </div>
+      
+        <!-- put here content that will not change
+        between your pages, like <footer> -->
+
+
+    <!-- Gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js" integrity="sha256-3arngJBQR3FTyeRtL3muAGFaGcL8iHsubYOqq48mBLw=" crossorigin="anonymous"></script>
+
+    <!-- Barba JS -->
+    <script src="https://unpkg.com/@barba/core"></script>
+</body>
+</html>
